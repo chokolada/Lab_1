@@ -43,6 +43,5 @@ public class Plate {
         for (int i = 0; i < objectArray.length; i++){
             System.out.println(objectArray[i]);
         }
-
     }
 }
