@@ -31,15 +31,11 @@ public class Plate {
         return instance;
     }
     public static void main(String[] args) {
-        Plate[] objectArray = new Plate[4];
-        objectArray[0] = new Plate();
-        objectArray[1] = new Plate( 10, "mramor", "green", false, false);
-        objectArray[2] = getInstance();
-        objectArray[3] = getInstance();
-        objectArray[1].wash();
-        objectArray[1].dirty();
-        objectArray[1].eat();
-
+        Plate[] objectArray = {
+        new Plate(),
+        new Plate( 10, "mramor", "green", false, false),
+        getInstance(),
+        getInstance()};
         for (int i = 0; i < objectArray.length; i++){
             System.out.println(objectArray[i]);
         }
