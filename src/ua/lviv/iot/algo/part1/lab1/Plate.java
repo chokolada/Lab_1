@@ -36,8 +36,8 @@ public class Plate {
         new Plate( 10, "mramor", "green", false, false),
         getInstance(),
         getInstance()};
-        for (int i = 0; i < objectArray.length; i++){
-            System.out.println(objectArray[i]);
+        for (Plate plate : objectArray) {
+            System.out.println(plate);
         }
     }
 }
