@@ -6,7 +6,6 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class Plate {
     private int diameter;
     private String material;
@@ -31,12 +30,14 @@ public class Plate {
         return instance;
     }
     public static void main(String[] args) {
-        Plate[] objectArray = {
-        new Plate(),
-        new Plate( 10, "mramor", "green", false, false),
-        getInstance(),
-        getInstance()};
-        for (Plate plate : objectArray) {
+        Plate[] plates = {
+            new Plate(),
+            new Plate( 10, "mramor", "green", false, false),
+            getInstance(),
+            getInstance()
+        };
+
+        for (Plate plate : plates) {
             System.out.println(plate);
         }
     }
