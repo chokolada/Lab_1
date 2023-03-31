@@ -10,7 +10,6 @@ public abstract class Plate{
     protected boolean isClean = false;
     protected boolean hasFood = false;
     public abstract double getMaxFoodWeight();
-
     public String getColor() {
         return color;
     }
