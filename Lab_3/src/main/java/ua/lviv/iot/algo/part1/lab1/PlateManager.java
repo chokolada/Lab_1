@@ -1,6 +1,8 @@
 package ua.lviv.iot.algo.part1.lab1;
 import lombok.ToString;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,7 +14,7 @@ public class PlateManager {
         plates.addAll(List.of(plate));
     };
     public List<Plate> getPlates() {
-        return plates;
+        return new ArrayList<>(plates);
     }
 
     public List<Plate> findAllWithWeightGreaterThan(int searchedWeight) {
@@ -26,7 +28,7 @@ public class PlateManager {
     };
     public List<Plate> findAllPlatesWithColor(String searchedColor){
         List<Plate> filtredPlates = plates.stream().
-                filter(color -> color.getColor() == searchedColor).
+                filter(color -> color.getColor().equals(searchedColor)).
                 collect(Collectors.toList());
         for (Plate plate: filtredPlates) {
             System.out.println("Color searched plate->" + plate);

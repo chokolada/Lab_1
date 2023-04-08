@@ -11,7 +11,8 @@ public class DessertPlate extends Plate{
 
     @Override
     public double getMaxFoodWeight() {
-        return 3.14 * (diameter/2) * 1.8;
+        double result = Math.PI * (diameter/2) * 1.8;
+        return result;
     }
     @Override
     public String toString() {

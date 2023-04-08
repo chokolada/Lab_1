@@ -10,7 +10,8 @@ public class SaladPlate extends Plate{
     }
     @Override
     public double getMaxFoodWeight() {
-        return (3.14 * (diameter/2) * (diameter/2) * (diameter/2))/3;
+        double result = (Math.PI * (diameter/2) * (diameter/2) * (diameter/2))/3;
+        return result;
     }
 
     @Override
