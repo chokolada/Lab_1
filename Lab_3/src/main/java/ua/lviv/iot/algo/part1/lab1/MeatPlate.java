@@ -1,10 +1,12 @@
 package ua.lviv.iot.algo.part1.lab1;
 
-public class MeatPlate extends Plate{
-    private int height;
-    private String meatInPlate;
+public class MeatPlate extends Plate {
+    private final int height;
+    private final String meatInPlate;
 
-    public MeatPlate(int diameter, String material, String color, boolean isClean, boolean hasFood, int height, String meatInPlate) {
+    public MeatPlate(final int diameter,final String material,final String color,
+                     final boolean isClean, final boolean hasFood,final int height,
+                     final String meatInPlate) {
         super(diameter, material, color, isClean, hasFood);
         this.height = height;
         this.meatInPlate = meatInPlate;
@@ -12,7 +14,16 @@ public class MeatPlate extends Plate{
 
     @Override
     public double getMaxFoodWeight() {
-        return diameter * diameter * height;
+        return (double) diameter * (double) diameter * (double) height;
+    }
+
+    public String getHeaders() {
+        return "MeatPlate," + super.getHeaders() + ',' + "height" + "," + "meatInPlate";
+    }
+
+
+    public String toCSV() {
+        return "MeatPlate," + super.toCSV() + String.format(",%d,%s", height, meatInPlate);
     }
 
     @Override

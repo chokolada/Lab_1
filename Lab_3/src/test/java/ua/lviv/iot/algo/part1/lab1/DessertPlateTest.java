@@ -1,22 +1,23 @@
 package ua.lviv.iot.algo.part1.lab1;
 
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 class DessertPlateTest {
 
-    @Test
-    void getMaxFoodWeight() {
-        DessertPlate dessert = new DessertPlate(5,"clay", "blue", false, false, "ice cream",  "chocolate");
-        dessert = new DessertPlate(4, "marble", "pink", true, false, "biscuit", "chocolate");
-        assertEquals(dessert.getMaxFoodWeight() > 100, dessert.getMaxFoodWeight() > 100);
+    @BeforeEach
+    public void setUp() {
+        Plate plate1;
+        Plate plate2;
+        plate1 = new DessertPlate(5, "clay", "blue", false, false, "ice cream", "chocolate");
+        plate2 = new DessertPlate(4, "marble", "pink", true, false, "biscuit", "chocolate");
     }
-
     @Test
     void testToString() {
-        DessertPlate dessert = new DessertPlate(5,"clay", "blue", false, false, "ice cream",  "chocolate");
+        DessertPlate dessert = new DessertPlate(5, "clay", "blue", false, false, "ice cream", "chocolate");
         assertEquals("DessertPlate{" +
                 "DessertOnThePlate='" + "ice cream" + '\'' +
                 ", topping='" + "chocolate" + '\'' +
@@ -25,11 +26,13 @@ class DessertPlateTest {
                 ", color='" + "blue" + '\'' +
                 ", isClean=" + false +
                 ", hasFood=" + false +
-                '}' , dessert.toString());
+                '}', dessert.toString());
     }
+
     @Test
-    void testGetColor() {
-        DessertPlate dessert = new DessertPlate(5,"clay", "blue", false, false, "ice cream",  "chocolate");
-        assertEquals(dessert.color, "blue");
+    void testGetMaxFoodWeight() {
+        Plate plate;
+        plate = new DessertPlate(5, "clay", "blue", false, false, "ice cream", "chocolate");
+        assertEquals(11.309733552923255, plate.getMaxFoodWeight());
     }
 }

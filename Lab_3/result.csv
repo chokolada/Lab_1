@@ -1,0 +1,12 @@
+MeatPlate,diameter,material,color,isClean,hasFood,height,meatInPlate
+MeatPlate,20,steel,white,false,true,10,chicken
+MeatPlate,18,clay,black,true,true,12,beef
+DessertPlate,diameter,material,color,isClean,hasFood,dessertOnThePlate,topping
+DessertPlate,5,clay,blue,false,false,ice cream,chocolate
+DessertPlate,4,marble,pink,true,false,biscuit,chocolate
+SoupPlate,diameter,material,color,isClean,hasFood,deepnessInSm,soupType
+SoupPlate,2,clay,yellow,false,true,8,Stew
+SoupPlate,7,marble,orange,true,false,4,Borsch
+SaladPlate,diameter,material,color,isClean,hasFood,plateType,canBeUsedInScullion
+SaladPlate10,marble,red,true,false,round,false
+SaladPlate12,iron,purple,false,false,oval,true
